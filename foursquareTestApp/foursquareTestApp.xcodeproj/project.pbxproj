@@ -14,6 +14,11 @@
 		7D4CBB2B20AC93070093D027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4CBB2920AC93070093D027 /* LaunchScreen.storyboard */; };
 		7D4CBB3620AC93070093D027 /* foursquareTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CBB3520AC93070093D027 /* foursquareTestAppTests.swift */; };
 		7D4CBB4120AC93070093D027 /* foursquareTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CBB4020AC93070093D027 /* foursquareTestAppUITests.swift */; };
+		7D4CBB5320AC954F0093D027 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CBB5220AC954F0093D027 /* Venue.swift */; };
+		7D4CBB5520AC96EF0093D027 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CBB5420AC96EF0093D027 /* ApiClient.swift */; };
+		7D4CBB5720AC97770093D027 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CBB5620AC97770093D027 /* Request.swift */; };
+		7D4CBB5A20ACA2F40093D027 /* SearchVenuesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CBB5920ACA2F40093D027 /* SearchVenuesRequest.swift */; };
+		7D4CBB6020ACAD020093D027 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D4CBB5B20ACAB290093D027 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +45,17 @@
 		7D4CBB2520AC93060093D027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D4CBB2720AC93070093D027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D4CBB2A20AC93070093D027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7D4CBB2C20AC93070093D027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D4CBB3120AC93070093D027 /* foursquareTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foursquareTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4CBB3520AC93070093D027 /* foursquareTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foursquareTestAppTests.swift; sourceTree = "<group>"; };
 		7D4CBB3720AC93070093D027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D4CBB3C20AC93070093D027 /* foursquareTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foursquareTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4CBB4020AC93070093D027 /* foursquareTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foursquareTestAppUITests.swift; sourceTree = "<group>"; };
 		7D4CBB4220AC93070093D027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D4CBB5220AC954F0093D027 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		7D4CBB5420AC96EF0093D027 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7D4CBB5620AC97770093D027 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		7D4CBB5920ACA2F40093D027 /* SearchVenuesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVenuesRequest.swift; sourceTree = "<group>"; };
+		7D4CBB5B20ACAB290093D027 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +106,11 @@
 		7D4CBB1F20AC93060093D027 /* foursquareTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				7D4CBB2020AC93060093D027 /* AppDelegate.swift */,
+				7D4CBB5020AC95390093D027 /* Networking */,
+				7D4CBB4F20AC952A0093D027 /* Resources */,
+				7D4CBB4E20AC95190093D027 /* Application */,
 				7D4CBB2220AC93060093D027 /* ViewController.swift */,
 				7D4CBB2420AC93060093D027 /* Main.storyboard */,
-				7D4CBB2720AC93070093D027 /* Assets.xcassets */,
-				7D4CBB2920AC93070093D027 /* LaunchScreen.storyboard */,
-				7D4CBB2C20AC93070093D027 /* Info.plist */,
 			);
 			path = foursquareTestApp;
 			sourceTree = "<group>";
@@ -123,6 +131,51 @@
 				7D4CBB4220AC93070093D027 /* Info.plist */,
 			);
 			path = foursquareTestAppUITests;
+			sourceTree = "<group>";
+		};
+		7D4CBB4E20AC95190093D027 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7D4CBB5B20ACAB290093D027 /* Info.plist */,
+				7D4CBB2020AC93060093D027 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7D4CBB4F20AC952A0093D027 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D4CBB2920AC93070093D027 /* LaunchScreen.storyboard */,
+				7D4CBB2720AC93070093D027 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D4CBB5020AC95390093D027 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7D4CBB5820ACA2760093D027 /* Requests */,
+				7D4CBB5120AC95400093D027 /* Models */,
+				7D4CBB5420AC96EF0093D027 /* ApiClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7D4CBB5120AC95400093D027 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D4CBB5220AC954F0093D027 /* Venue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7D4CBB5820ACA2760093D027 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				7D4CBB5620AC97770093D027 /* Request.swift */,
+				7D4CBB5920ACA2F40093D027 /* SearchVenuesRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4CBB6020ACAD020093D027 /* Info.plist in Resources */,
 				7D4CBB2B20AC93070093D027 /* LaunchScreen.storyboard in Resources */,
 				7D4CBB2820AC93070093D027 /* Assets.xcassets in Resources */,
 				7D4CBB2620AC93060093D027 /* Main.storyboard in Resources */,
@@ -257,7 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4CBB2320AC93060093D027 /* ViewController.swift in Sources */,
+				7D4CBB5320AC954F0093D027 /* Venue.swift in Sources */,
+				7D4CBB5720AC97770093D027 /* Request.swift in Sources */,
+				7D4CBB5A20ACA2F40093D027 /* SearchVenuesRequest.swift in Sources */,
 				7D4CBB2120AC93060093D027 /* AppDelegate.swift in Sources */,
+				7D4CBB5520AC96EF0093D027 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = foursquareTestApp/Info.plist;
+				INFOPLIST_FILE = foursquareTestApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = foursquareTestApp/Info.plist;
+				INFOPLIST_FILE = foursquareTestApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
