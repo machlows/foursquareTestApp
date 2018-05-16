@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NcK-bB-Hir">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Venues View Controller-->
+        <scene sceneID="Wl5-DR-MQj">
+            <objects>
+                <tableViewController storyboardIdentifier="VenuesViewController" id="NcK-bB-Hir" customClass="VenuesViewController" customModule="foursquareTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lXl-r6-vsC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="11V-Rq-Pey">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="NcK-bB-Hir" id="TIj-tt-Xmd"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VenuesCell" rowHeight="168" id="5zT-GU-gjS" customClass="VenueCell" customModule="foursquareTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="168"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5zT-GU-gjS" id="Ygs-59-1gO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="167.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTm-Z7-9r5">
+                                            <rect key="frame" x="16" y="2" width="89" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfa-Oq-VIu">
+                                            <rect key="frame" x="113" y="1" width="40" height="19"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-CP-EPW">
+                                            <rect key="frame" x="16" y="28" width="52" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gw-37-NPI">
+                                            <rect key="frame" x="16" y="53" width="343" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="104" id="OcJ-MI-9x5"/>
+                                                <constraint firstAttribute="width" constant="343" id="bhn-RS-kKZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ERd-CP-EPW" firstAttribute="leading" secondItem="Ygs-59-1gO" secondAttribute="leading" constant="16" id="0BM-Z1-trj"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ERd-CP-EPW" secondAttribute="trailing" constant="20" symbolic="YES" id="2HG-5O-3DX"/>
+                                        <constraint firstItem="XTm-Z7-9r5" firstAttribute="leading" secondItem="Ygs-59-1gO" secondAttribute="leading" constant="16" id="C57-pw-f7F"/>
+                                        <constraint firstItem="qfa-Oq-VIu" firstAttribute="leading" secondItem="XTm-Z7-9r5" secondAttribute="trailing" constant="8" id="PfD-83-iVF"/>
+                                        <constraint firstItem="7gw-37-NPI" firstAttribute="trailing" secondItem="Ygs-59-1gO" secondAttribute="trailingMargin" id="RCX-UY-HIu"/>
+                                        <constraint firstItem="7gw-37-NPI" firstAttribute="bottom" secondItem="Ygs-59-1gO" secondAttribute="bottomMargin" id="Sx1-DN-nAk"/>
+                                        <constraint firstItem="7gw-37-NPI" firstAttribute="leading" secondItem="Ygs-59-1gO" secondAttribute="leading" constant="16" id="ab9-fi-zsm"/>
+                                        <constraint firstItem="7gw-37-NPI" firstAttribute="top" secondItem="ERd-CP-EPW" secondAttribute="bottom" constant="7" id="cwa-3l-FGZ"/>
+                                        <constraint firstItem="XTm-Z7-9r5" firstAttribute="top" secondItem="Ygs-59-1gO" secondAttribute="top" constant="2" id="h9k-TT-1AT"/>
+                                        <constraint firstItem="ERd-CP-EPW" firstAttribute="top" secondItem="XTm-Z7-9r5" secondAttribute="bottom" constant="8" id="icW-M3-Gs7"/>
+                                        <constraint firstItem="qfa-Oq-VIu" firstAttribute="top" secondItem="Ygs-59-1gO" secondAttribute="top" constant="1" id="niW-Va-YOn"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qfa-Oq-VIu" secondAttribute="trailing" id="zV2-Qk-4bh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="adressLabel" destination="7gw-37-NPI" id="SOt-oj-TeT"/>
+                                    <outlet property="nameLabel" destination="qfa-Oq-VIu" id="xT8-9e-1g7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NcK-bB-Hir" id="RVn-3s-eEf"/>
+                            <outlet property="delegate" destination="NcK-bB-Hir" id="HKn-wo-Lpi"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="shearchBarCotroller" destination="11V-Rq-Pey" id="4Nk-mi-U87"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TqK-9N-9Lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.40000000000001" y="67.916041979010501"/>
+        </scene>
+    </scenes>
+</document>
