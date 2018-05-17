@@ -46,6 +46,10 @@ extension VenuesInteractor: CLLocationManagerDelegate {
         guard let coordinate = locations.last?.coordinate else { return }
         self.currentLocation = (coordinate.latitude, coordinate.longitude)
     }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.delegate.didRecivedError(error)
+    }
 }
 
 extension VenuesInteractor: VenuesInteractorInterface {
@@ -54,6 +58,7 @@ extension VenuesInteractor: VenuesInteractorInterface {
     }
     
     func fetchVenues(with name: String) {
+        locationManager.requestLocation()
         let request = SearchVenuesRequest(with: name, location: currentLocation)
         apiClient.send(apiRequest: request) { (venuesResponse: VenueResponse?, error: Error?) in
             if let response = venuesResponse {
@@ -61,7 +66,7 @@ extension VenuesInteractor: VenuesInteractorInterface {
                 self.delegate.didFetchedVenues(venues: venues.reduce([], {$0+$1}))
             }
             if let error = error {
-                self.delegate.didRecivedErrorWhileFetching(error)
+                self.delegate.didRecivedError(error)
             }
         }
     }

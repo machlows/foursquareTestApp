@@ -25,5 +25,5 @@ protocol VenuesInteractorInterface: class {
 
 protocol VenuesInteractorDelegate: class {
     func didFetchedVenues(venues: [Venue]?)
-    func didRecivedErrorWhileFetching(_ error: Error)
+    func didRecivedError(_ error: Error)
 }

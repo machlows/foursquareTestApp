@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>&quot;some text 1&quot;</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>some text2</string>
+	<string>App uses locationService to show venues around you</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

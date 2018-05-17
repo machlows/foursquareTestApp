@@ -30,7 +30,7 @@ extension VenuesPresenter: VenuesInteractorDelegate {
         view.realoadViewModel(model: viewModel)
     }
     
-    func didRecivedErrorWhileFetching(_ error: Error) {
+    func didRecivedError(_ error: Error) {
         view.showError(with: error.localizedDescription)
     }
 }
