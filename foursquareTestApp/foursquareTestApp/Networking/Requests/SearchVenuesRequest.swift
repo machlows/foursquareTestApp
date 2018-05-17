@@ -10,9 +10,9 @@ import Foundation
 typealias LatLong = (latitude: Double, longitiude: Double)
 
 class SearchVenuesRequest: Request {
-    var parameters: [String : String]
-    var path: String = "/venues/explore"
-    var method = RequestType.GET
+    let parameters: [String : String]
+    let path: String = "/venues/explore"
+    let method = RequestType.GET
     
     init(with name: String, location:LatLong) {
         parameters = ["ll":"\(location.latitude),\(location.longitiude)","query": name]
