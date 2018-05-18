@@ -58,7 +58,6 @@ extension VenuesInteractor: VenuesInteractorInterface {
     }
     
     func fetchVenues(with name: String) {
-        locationManager.requestLocation()
         let request = SearchVenuesRequest(with: name, location: currentLocation)
         apiClient.send(apiRequest: request) { (venuesResponse: VenueResponse?, error: Error?) in
             if let response = venuesResponse {
